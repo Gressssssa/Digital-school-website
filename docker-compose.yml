@@ -1,8 +1,7 @@
 services:
   web:
     image: nginx:alpine
-    restart: unless-stopped
-    ports:
-      - "80"
+    cpus: 0.5
+    mem_limit: 256m
     volumes:
       - ./:/usr/share/nginx/html:ro
